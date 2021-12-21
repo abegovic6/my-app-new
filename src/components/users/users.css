@@ -1,0 +1,16 @@
+.table-container{
+    padding-left:32px;
+    padding-right:32px;
+    padding-top:32px;
+}
+.tableRow:nth-of-type(odd){
+    background-color:#d9d9d9
+}
+.tableRow:hover{
+    background-color:lightblue;
+    opacity:0.6;
+    cursor:pointer
+}
+.actionIcon{
+    cursor:pointer
+}

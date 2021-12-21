@@ -1,0 +1,14 @@
+.button-item {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #353535;
+    color: white;
+}
+
+.button-item:hover {
+    font-weight: bold;
+    background-color: burlywood;
+}

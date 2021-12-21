@@ -1,0 +1,12 @@
+.main-container {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: auto;
+}
+
+.grid-container {
+    box-sizing: border-box;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }

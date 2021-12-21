@@ -6,7 +6,9 @@
 
 .grid-container {
     box-sizing: border-box;
-    max-width: 100%;
+    max-width: 80%;
+    margin: auto;
     display: grid;
     grid-template-columns: 33% 33% 33%;
+    grid-gap: 10px;
   }

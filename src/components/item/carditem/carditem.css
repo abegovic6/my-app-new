@@ -1,14 +1,32 @@
-.card {
+.card-body {
     box-sizing: border-box;
-    border: 1px solid #3C4F76;
+    border: 1px solid black;
     text-align: center;
     width: 100%;
     padding: 10px;
 }
 
-h5 {
-    font-size: larger;
-    padding: 10px;
-    padding-bottom: 0;
-    color: black;
+.main-container {
+    display: inline;
+}
+
+.card-title {
+    box-sizing: border-box;
+    float: left;
+    width: 80%;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.edit-icon {
+    box-sizing: border-box;
+    float: right;
+    width: 20%;
+}
+
+.card-text {
+    box-sizing: border-box;
+    width: 100%;
+    float: none;
+    margin: 20px;
 }

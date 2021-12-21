@@ -1,15 +1,23 @@
 import ButtonItem from "../buttonitem/buttonitem"
+import EditIcon from '@mui/icons-material/Edit';
 import "./carditem.css"
 
-export default function CardItem({title, text, action}){
+export default function CardItem({card, actionUpdate, actionDelete}){
     return(
         <div className="card">
             <div className="card-body">
-                <h2 className="card-title">{title}</h2>
-                <p className="card-text">
-                    {text}
-                </p>
-                <ButtonItem text={action}/>
+                <div className="main-container">
+                    <div className="card-title">
+                        {card.title}
+                    </div>
+                    <div className="edit-icon">
+                        <EditIcon onClick={actionUpdate} ></EditIcon>
+                    </div>
+                </div>
+                <div className="card-text">
+                    {card.text}
+                </div>
+                <ButtonItem text={"Delete"} onClick={actionDelete}/>
             </div>
         </div>
     )

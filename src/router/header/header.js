@@ -10,6 +10,7 @@ export default function Header(){
                     <HeaderItem text={'Users'} route={'/users'} />
                     <HeaderItem text={'About'}  route={'/about'} />
                     <HeaderItem text={'Contact'} route={'/contact'} />
+                    <HeaderItem text={'Options'} route={'/options'} />
                 </ul>
             </div>
 

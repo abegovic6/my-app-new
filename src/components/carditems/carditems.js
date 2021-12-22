@@ -5,7 +5,7 @@ import EditCardDialog from './editCardDialog';
 
 import './carditems.css'
 
-export default function CardItems() {
+export default function CardItems({alignment}) {
     const [cards, setUsers] = useState([]);
     const [selectedCard, setSelectedCard] = useState(null)
     const [dialogOpen, setDialogOpen] = useState(false)
@@ -59,7 +59,7 @@ export default function CardItems() {
             <div className='grid-container'>
                 {cards.map((row, index) => {
                     return <div key={index}>
-                        <CardItem
+                        <CardItem 
                             card={row}
                             actionUpdate={editCard(row)}
                                 actionDelete={deleteCard(row.id)}>
@@ -67,9 +67,6 @@ export default function CardItems() {
                     </div>
                 })}
             </div>
-            {selectedCard &&
-                <EditCardDialog open={dialogOpen} handleClose={handleClose} selectedCard={selectedCard} handleSaveAndClose={handleSaveAndClose} />
-            }
         </div>
     )
 }

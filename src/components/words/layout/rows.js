@@ -1,6 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
+import OutlinedCard from '../outlinedcard/outlinedcard'
 
 function Item(props) {
   const { sx, ...other } = props;
@@ -32,13 +33,13 @@ Item.propTypes = {
   ]),
 };
 
-export default function GridTemplateRows() {
+export default function GridTemplateRows({ cardsArray}) {
   return (
     <div style={{ width: '100%' }}>
       <Box sx={{ display: 'grid', gridTemplateRows: 'repeat(3, 1fr)' }}>
-        <Item>1</Item>
-        <Item>2</Item>
-        <Item>3</Item>
+        {cardsArray.map((card, index) => {
+          return <OutlinedCard key={index} pronunciation={card.pronunciation} word={card.word} text={card.text} typeword={card.typeword}></OutlinedCard>
+        })}
       </Box>
     </div>
   );

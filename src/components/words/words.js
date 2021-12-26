@@ -1,11 +1,11 @@
 import React from 'react'
-import HorizontalToggleButtons from '../item/toggle/toggle'
-import './options.css'
+import HorizontalToggleButtons from './toggle/toggle'
+import './words.css'
 
-export default function Options(){
+export default function Words(){
 
     return(
-        <div className="options">
+        <div className="words">
             <h1>How do you want your layout?</h1>
             <HorizontalToggleButtons />
         </div>

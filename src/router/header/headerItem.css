@@ -8,6 +8,7 @@
 
 .headerItem a {
     text-decoration: none;
+    height: 50px;
     color: #fff;
     display: block;
     transition: .3s background-color;
@@ -16,4 +17,22 @@
 .headerItem a:hover {
     font-weight: bold;
     background-color: burlywood;
+}
+
+.selectedHeaderItem{
+    font-size: 1.2em;
+    line-height: 40px;
+    height: 40px;
+    text-align: center;
+    color: black;
+    background-color: burlywood;
+    height: max-content;
+}
+
+.selectedHeaderItem a {
+    text-decoration: none;
+    color: black;
+    height: 50px;
+    display: block;
+    transition: .3s background-color;
 }

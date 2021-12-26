@@ -8,11 +8,38 @@ import GridTemplateRows from '../layout/rows';
 
 export default function HorizontalToggleButtons() {
     const [view, setView] = React.useState('list');
+    const [cards, setCards] = React.useState([]);
 
     const handleChange = (event, nextView) => {
         setView(nextView);
-
     };
+
+    React.useEffect(() => {
+        const cardsArray = [
+            {
+                id: 1,
+                word: 'penetralia',
+                pronunciation: 'pen.i.trey.lee.uh',
+                typeword: 'noun',
+                text: 'the innermost parts of recesses of a place or thing.'
+            },{
+                id: 2,
+                word: 'forgetive',
+                pronunciation: 'fawr.ji.tiv.fohr',
+                typeword: 'adjective',
+                text: 'inventive. creative.'
+            },{
+                id: 3,
+                word: 'bucolic',
+                pronunciation: 'bu.col.ic',
+                typeword: 'noun',
+                text: 'relating to the pleasant aspects of countryside and country life.'
+            },
+        ];
+        setCards(cardsArray);
+    }, []);
+
+
 
     return (
         <div>
@@ -24,7 +51,7 @@ export default function HorizontalToggleButtons() {
                     onChange={handleChange}
                 >
                     <ToggleButton value="row" aria-label="list">
-                        <TableRowsIcon/>
+                        <TableRowsIcon />
                     </ToggleButton>
                     <ToggleButton value="colume" aria-label="module">
                         <ViewWeekIcon />
@@ -33,11 +60,11 @@ export default function HorizontalToggleButtons() {
             </div>
             <div>
                 {view === 'row' && (
-                    <GridTemplateRows />
+                    <GridTemplateRows cardsArray={cards}/>
                 )}
 
                 {view === 'colume' && (
-                    <GridTemplateColumns/>
+                    <GridTemplateColumns cardsArray={cards}/>
                 )}
             </div>
         </div>

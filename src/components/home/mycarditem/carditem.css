@@ -1,9 +1,21 @@
-.card-body {
+.card-body-day {
     box-sizing: border-box;
     border: 1px solid black;
     text-align: center;
+    background-color: white;
     width: 100%;
     padding: 10px;
+    color: black;
+}
+
+.card-body-night {
+    box-sizing: border-box;
+    border: 1px solid white;
+    text-align: center;
+    background-color: #353535;
+    width: 100%;
+    padding: 10px;
+    color: white;
 }
 
 .main-container {
@@ -12,21 +24,14 @@
 
 .card-title {
     box-sizing: border-box;
-    float: left;
-    width: 80%;
+    width: 100%;
     font-size: 35px;
     font-weight: bold;
-}
-
-.edit-icon {
-    box-sizing: border-box;
-    float: right;
-    width: 20%;
 }
 
 .card-text {
     box-sizing: border-box;
     width: 100%;
     float: none;
-    margin: 20px;
+    margin: 5px;
 }
